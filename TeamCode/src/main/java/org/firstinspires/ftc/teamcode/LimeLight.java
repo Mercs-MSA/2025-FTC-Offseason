@@ -141,7 +141,7 @@ public class LimeLight extends OpMode {
                 telemetryA.addData("tync", result.getTyNC());
 
                 theta = result.getTy();
-//                    telemetryA.addData("Theta:", theta);
+                telemetryA.addData("Theta:", theta);
                 telemetryA.addData("Depth in Inches:", depthPoly(theta));
 
                 telemetryA.addData("Botpose", botpose.toString());
@@ -212,7 +212,7 @@ public class LimeLight extends OpMode {
         }
 
         telemetryA.addData("Estimated Depth:", estDepth);
-//            telemetryA.addData("Estimated Theta:", avgTheta);
+        telemetryA.addData("Estimated Theta:", avgTheta);
 
         if (pipeline == 0)
             telemetryA.addLine("Pipleline: Blue");
