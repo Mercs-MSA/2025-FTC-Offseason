@@ -8,6 +8,7 @@ import com.qualcomm.robotcore.hardware.DcMotor;
 public class TestbedSwyftDrive extends OpMode {
 
     private DcMotor swyftTest = null;
+    private double x = 0.0;
 
     @Override
     public void init() {
@@ -16,6 +17,7 @@ public class TestbedSwyftDrive extends OpMode {
 
     @Override
     public void loop() {
-
+        swyftTest.setPower(x);
+        x = -gamepad1.left_stick_y;
     }
 }
