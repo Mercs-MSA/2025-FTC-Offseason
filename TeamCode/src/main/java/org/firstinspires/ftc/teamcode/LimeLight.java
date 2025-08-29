@@ -59,14 +59,19 @@ public class LimeLight extends OpMode {
     }
 
     private double estimatedDepth(int avgCount, int dataCount) {
+        double sumTheta = 0;
         double sum = 0;
         for (int i = 0; i < avgCount; i++) {
             double innerSum = 0;
+            double innerThetaSum = 0;
             for (int e = 0; e < dataCount; e++) {
                 innerSum += depthPoly(theta);
+                innerThetaSum += theta;
             }
             sum += (innerSum / dataCount);
+            sumTheta += (innerThetaSum / dataCount);
         }
+        avgTheta = sumTheta / avgCount;
         return sum / avgCount;
     }
 
