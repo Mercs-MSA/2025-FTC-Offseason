@@ -175,6 +175,9 @@ public class SensorLimelight3A extends LinearOpMode {
         boolean pastBPressed = false;
         boolean pastYPressed = false;
         while (opModeIsActive()) {
+
+            LimeLightImageTools ltool = new LimeLightImageTools(limelight);
+
 //            LLStatus status = limelight.getStatus();
 //            telemetryA.addData("Name", "%s",
 //                    status.getName());
