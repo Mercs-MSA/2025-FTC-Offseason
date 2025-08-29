@@ -54,8 +54,9 @@ public class LimeLight extends OpMode {
     }
 
     private double depthPoly(double x) {
-        return (0.000163173 * Math.pow(x, 3)) + (0.00314303 * Math.pow(x, 2)) + (0.311249 * x) + 10.77176; //V1
+//        return (0.000163173 * Math.pow(x, 3)) + (0.00314303 * Math.pow(x, 2)) + (0.311249 * x) + 10.77176; //V1
 //        return (0.000448391 * Math.pow(x, 3)) + (0.00609961 * Math.pow(x, 2)) + (0.247723 * x) + 10.84374; //V2
+        return (0.0002377 * Math.pow(x, 3)) + (0.00551973 * Math.pow(x, 2)) + (0.276311 * x) + 9.7189;
     }
 
     private double estimatedDepth(int avgCount, int dataCount) {
